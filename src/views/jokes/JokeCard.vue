@@ -1,5 +1,5 @@
 <template>
-  <div class="joke">
+  <div class="joke" :class="{'unsafe': !joke.safe}" >
     <p>{{ joke.setup }}</p>
     <span>{{ joke.delivery }}</span>
   </div>
@@ -15,8 +15,8 @@ export default {
 .joke {
   border: 1px #888 solid;
   border-radius: 5px;
-  max-width: 250px;
-  margin: 30px 20px;
+  width: 250px;
+  margin: 15px 15px;
   padding: 10px 15px;
 }
 .joke p {
@@ -27,5 +27,8 @@ export default {
   font-size: 14px;
   display: inline-block;
   margin-bottom: 10px;
+}
+.unsafe {
+    border: 1px crimson solid;
 }
 </style>

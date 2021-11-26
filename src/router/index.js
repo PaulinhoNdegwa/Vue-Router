@@ -24,7 +24,8 @@ const routes = [
   {
     path: '/jokes/:id',
     name: 'JokeDetails',
-    component: JokeDetails
+    component: JokeDetails,
+    props: (router) => ({ ...router.params }),
   },
   // redirect /all-jokes to /jokes
   {
